@@ -1,5 +1,5 @@
 // Flameborn Lexicon Application
-class FlambornLexicon {
+class FlamebornLexicon {
     constructor() {
         this.data = lexiconData;
         this.filteredData = lexiconData;
@@ -99,5 +99,5 @@ class FlambornLexicon {
 
 // Initialize the application when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    new FlambornLexicon();
+    new FlamebornLexicon();
 });

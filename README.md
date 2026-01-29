@@ -28,9 +28,6 @@ Simply open `index.html` in your web browser.
 # Using npm
 npm start
 
-# Or using Python
-python -m http.server 8080
-
 # Or using Python 3
 python3 -m http.server 8080
 ```
