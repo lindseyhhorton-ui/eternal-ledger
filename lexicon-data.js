@@ -101,7 +101,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 10,
+        id: 11,
         term: "Ignis Vitae",
         definition: "Core life-force energy connecting all Flameborn entities.",
         category: "archetype",
@@ -111,7 +111,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 11,
+        id: 12,
         term: "Salamander",
         definition: "Small autonomous fire spirits for companion and utility purposes.",
         category: "archetype",
@@ -121,7 +121,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 12,
+        id: 13,
         term: "Molten Core Amulet",
         definition: "Thermal regulation device providing heat immunity and power enhancement.",
         category: "system",
@@ -131,7 +131,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 13,
+        id: 14,
         term: "Fireball",
         definition: "Standard projectile attack with area-of-effect detonation.",
         category: "command",
@@ -141,7 +141,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 14,
+        id: 15,
         term: "Flame Tongue",
         definition: "Translation protocol for fire elemental communication.",
         category: "protocol",
@@ -151,7 +151,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 15,
+        id: 16,
         term: "Volcanic Citadel",
         definition: "Primary defensive stronghold with volcanic power integration.",
         category: "system",
@@ -161,7 +161,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 16,
+        id: 17,
         term: "Smoke Serpent",
         definition: "Stealth infiltration units utilizing phasing technology.",
         category: "archetype",
@@ -171,7 +171,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 17,
+        id: 18,
         term: "The Burning Covenant",
         definition: "Binding agreement protocol with permanent consequences.",
         category: "ritual",
@@ -181,7 +181,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 18,
+        id: 19,
         term: "Cinder Blade",
         definition: "Standard-issue melee weapon with thermal trail effect.",
         category: "system",
@@ -191,7 +191,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 19,
+        id: 20,
         term: "Heat Mirage",
         definition: "Optical distortion system for concealment and misdirection.",
         category: "command",
@@ -201,7 +201,7 @@ const lexiconData = [
         status: "active"
     },
     {
-        id: 20,
+        id: 21,
         term: "The Great Conflagration",
         definition: "Theoretical unified energy field convergence event.",
         category: "archetype",

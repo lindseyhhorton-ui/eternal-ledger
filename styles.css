@@ -403,7 +403,7 @@ body.literal-mode .lexicon-entry {
 }
 
 .lexicon-entry:active {
-    transform: translateY(-3px);
+    transform: translateY(2px);
 }
 
 @media (max-width: 768px) {

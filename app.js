@@ -166,12 +166,19 @@ class FlamebornLexicon {
     }
     
     showDetailView(entry) {
+        // Lock body scroll
+        document.body.style.overflow = 'hidden';
+        
         const modal = document.createElement('div');
         modal.className = 'modal-overlay';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', `modal-title-${entry.id}`);
+        
         modal.innerHTML = `
             <div class="modal-content" style="border-color: ${entry.color_signature || '#ff6432'}">
                 <button class="modal-close" aria-label="Close">&times;</button>
-                <h2 style="color: ${entry.color_signature || '#ff6432'}">${this.escapeHtml(entry.term)}</h2>
+                <h2 id="modal-title-${entry.id}" style="color: ${entry.color_signature || '#ff6432'}">${this.escapeHtml(entry.term)}</h2>
                 <div class="modal-badges">
                     <span class="entry-category">${this.escapeHtml(entry.category)}</span>
                     ${entry.status ? `<span class="entry-status status-${entry.status}">${this.escapeHtml(entry.status)}</span>` : ''}
@@ -210,20 +217,29 @@ class FlamebornLexicon {
         
         document.body.appendChild(modal);
         
-        // Close handlers
+        // Focus management
         const closeBtn = modal.querySelector('.modal-close');
-        closeBtn.addEventListener('click', () => modal.remove());
+        setTimeout(() => closeBtn.focus(), 100);
+        
+        // Cleanup function
+        const closeModal = () => {
+            modal.remove();
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', escHandler);
+        };
+        
+        // Close handlers
+        closeBtn.addEventListener('click', closeModal);
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.remove();
+                closeModal();
             }
         });
         
         // ESC key handler
         const escHandler = (e) => {
             if (e.key === 'Escape') {
-                modal.remove();
-                document.removeEventListener('keydown', escHandler);
+                closeModal();
             }
         };
         document.addEventListener('keydown', escHandler);
