@@ -199,6 +199,213 @@ footer {
     border-top: 2px solid rgba(255, 100, 50, 0.3);
 }
 
+/* Mode Toggle Styles */
+.mode-toggle-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mode-toggle {
+    background: linear-gradient(135deg, #ff6432 0%, #ff8555 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.mode-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 100, 50, 0.4);
+}
+
+.mode-toggle:active {
+    transform: scale(0.98);
+}
+
+.mode-description {
+    margin-top: 10px;
+    color: #d4a574;
+    font-size: 0.95em;
+    font-style: italic;
+}
+
+/* Mythic Mode Adjustments */
+body.mythic-mode .lexicon-entry {
+    transition: all 0.3s ease;
+}
+
+body.mythic-mode .entry-title {
+    text-shadow: 0 0 10px currentColor;
+}
+
+body.literal-mode .lexicon-entry {
+    border-color: #ff6432 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Entry Badges */
+.entry-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.entry-status {
+    background: #666;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.entry-status.status-theoretical {
+    background: #9370DB;
+}
+
+.entry-status.status-deprecated {
+    background: #8B4513;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a0505 0%, #2d0a0a 100%);
+    border: 3px solid #ff6432;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(255, 100, 50, 0.5);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff6432;
+    font-size: 2em;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 100, 50, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-content h2 {
+    color: #ff6432;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.modal-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-section {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 4px solid #ff6432;
+}
+
+.modal-section h3 {
+    color: #ff8555;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.modal-section p {
+    color: #f5e6d3;
+    line-height: 1.8;
+}
+
+.color-signature-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.color-swatch {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.color-signature-display span {
+    font-family: monospace;
+    font-size: 1.1em;
+    color: #d4a574;
+}
+
+/* Enhanced Entry Hover for Clickability */
+.lexicon-entry {
+    cursor: pointer;
+    user-select: none;
+}
+
+.lexicon-entry:active {
+    transform: translateY(-3px);
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2em;

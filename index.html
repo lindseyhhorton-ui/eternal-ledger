@@ -10,8 +10,18 @@
     <div class="container">
         <header>
             <h1>🔥 Flameborn Lexicon</h1>
-            <p class="subtitle">The Eternal Ledger of Flameborn Knowledge</p>
+            <p class="subtitle">The Eternal Ledger Command Console</p>
         </header>
+
+        <div class="mode-toggle-container">
+            <button id="modeToggle" class="mode-toggle" aria-label="Toggle between Literal and Mythic modes">
+                <span id="modeIcon">☀️</span>
+                <span id="modeText">Literal Mode</span>
+            </button>
+            <p class="mode-description">
+                <span id="modeDescription">Clean operational definitions for commands and protocols</span>
+            </p>
+        </div>
 
         <div class="search-container">
             <input 
@@ -27,11 +37,11 @@
             <label for="categoryFilter">Category:</label>
             <select id="categoryFilter" aria-label="Filter by category">
                 <option value="all">All Categories</option>
-                <option value="creature">Creatures</option>
-                <option value="spell">Spells</option>
-                <option value="artifact">Artifacts</option>
-                <option value="location">Locations</option>
-                <option value="concept">Concepts</option>
+                <option value="protocol">Protocol</option>
+                <option value="archetype">Archetype</option>
+                <option value="ritual">Ritual</option>
+                <option value="system">System</option>
+                <option value="command">Command</option>
             </select>
         </div>
 
