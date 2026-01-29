@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flameborn Lexicon - Eternal Ledger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 Flameborn Lexicon</h1>
+            <p class="subtitle">The Eternal Ledger of Flameborn Knowledge</p>
+        </header>
+
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search the lexicon..." 
+                aria-label="Search terms"
+            >
+            <button id="searchBtn" aria-label="Search">🔍</button>
+        </div>
+
+        <div class="filter-container">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter" aria-label="Filter by category">
+                <option value="all">All Categories</option>
+                <option value="creature">Creatures</option>
+                <option value="spell">Spells</option>
+                <option value="artifact">Artifacts</option>
+                <option value="location">Locations</option>
+                <option value="concept">Concepts</option>
+            </select>
+        </div>
+
+        <main id="lexiconContent">
+            <div class="loading">Loading lexicon...</div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Eternal Ledger. All knowledge preserved for eternity.</p>
+        </footer>
+    </div>
+
+    <script src="lexicon-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
